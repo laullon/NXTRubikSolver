@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="NXTRubikSolver" default="default" basedir=".">
+    <description>Builds, tests, and runs the project NXTRubikSolver.</description>
+    <import file="nbproject/build-impl.xml"/>
+
+    <property environment="env"/>
+
+    <target depends="init,compile" description="Run a main class." name="run">
+        <exec dir="${build.classes.dir}" executable="${env.HOME}/lejos/bin/nxj">
+            <arg value="-r"/>
+            <arg value="-o"/>
+            <arg value="RubikSolver.nxj"/>
+            <arg value="com.laullon.NXT.RubikSolver"/>
+        </exec>
+    </target>
+</project>
